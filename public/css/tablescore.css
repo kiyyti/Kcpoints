@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+div {
+    display: block;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url("../picture/background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: auto;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+table {
+    text-align: center;
+    margin-top: 7%;
+}
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #813131;}
+/* สีช่องที่ 2 */
+
+#customers tr:hover {background-color: red;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #371515;
+    color: yellow;
+}
+
+#customers thead, 
+#customers tbody tr {
+    display: table; /* ทำให้แถวใน tbody แสดงเป็นตาราง */
+    width: 100%; /* ทำให้แถวใน tbody ใช้ความกว้างทั้งหมด */
+    table-layout: fixed; /* ควบคุมความกว้างของคอลัมน์ */
+}
+
+.tbody-wrapper {
+    max-height: 300px; /* กำหนดความสูงสูงสุด */
+    overflow-y: auto; /* เปิดใช้งานการเลื่อนในแนวตั้ง */
+}
+
+#customers thead {
+    display: table-header-group; /* ให้หัวตารางอยู่เหนือแถวใน tbody */
+}
+
+#customers tbody {
+    display: block; /* เปลี่ยน display ของ tbody ให้เป็น block */
+}
+
+#customers tr {
+    display: table; /* ให้แถวแสดงเป็นตาราง */
+    width: 100%; /* ทำให้แถวใน tbody ใช้ความกว้างทั้งหมด */
+    table-layout: fixed; /* ควบคุมความกว้างของคอลัมน์ */
+}

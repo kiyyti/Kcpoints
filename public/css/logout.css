@@ -1,0 +1,29 @@
+.btn-out {
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+    list-style: none;
+}
+
+.out {
+    text-decoration: none;
+    color: black;
+}
+
+.btn-out:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.content {
+    margin-bottom: 50px;
+    padding: 30px;
+}
+
+h3 {
+    margin: 10px;
+}   

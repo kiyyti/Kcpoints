@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="../public/css/admin.css">
+</head>
+<body>
+    <h1 align="center" stu>Generate qrcode</h1>
+    <form action="/getpoint" method="POST">
+        <center>    
+        <div class="input-wrapper">
+            <input type="text" class="day" name="day" placeholder="หัวข้อกิจกรรม">
+            <input type="number" name="Pnum" class="Pnum" placeholder="คะแนน">
+            <div class="gen-eiei"></div>
+            <button class="gen">gen code</button>
+        </div></center>
+    </form>
+    <a href="/">
+        <button class="btn-class-name" style="margin:20px;">
+            <span class="back"></span>
+            <span class="front"></span>
+        </button>
+    </a>
+</body>
+</html>
