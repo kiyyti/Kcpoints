@@ -81,7 +81,7 @@
                     </div>
             </form>
                 <div class="two">
-                    <span>หากคุณยังไม่ได้สมัครบัญชีกรุณา <a href="#" onclick="register()" style="color: white;">สมัครสมาชิก</a></span>
+                    <span>หากคุณยังไม่ได้สมัครบัญชีกรุณา<a href="#" onclick="register()" style="color: white;">สมัครสมาชิก</a></span>
                 </div>
             </div>
     </div>

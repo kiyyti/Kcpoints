@@ -1,213 +1,196 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 div {
-    display: block;
+display: block;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     background: url("../picture/background.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    overflow: hidden;
+    overflow: flex;
 }
 
-.profile {
-    color: #fff;
-    max-width: 100%;
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.profile-container {
+    max-width: 1000px; 
+    margin: 0 auto;
+    padding-top: 10vh;
+}
+
+.box {
+    background-color: #03002C;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #BB0029;
     width: 100%;
 }
-
-.heads {
-    line-height: 2.75rem;
-    font-size: 2.175rem;
+.box:hover {
+transform: scale(1.02); /* เมื่อชี้เมาส์จะขยาย */
 }
 
-.unheads {
-    font-family: Lato,Helvetica Neue,helvetica,sans-serif;
-    font-weight: 500;
-    line-height: var(--line-height);
-    margin-bottom: 1.25rem;
-    color: #a0a0a0;
-}
-
-.card {
-    padding: 2.5rem 1.25rem 1.875rem;
-    text-align: center;
-}
-
-.content {
-    align-items: flex-start;
+.profile-header {
     display: flex;
-    flex: 1 0 auto;
-    justify-content: center;
-}
-        
-.box {
-    margin-bottom: 1rem;
-    padding: 1.5rem 1.25rem;
-    border-radius: 50px;
-    position: relative;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    border: 2px solid rgba(160, 160, 160, 0.562);  
-    backdrop-filter: blur(2px);
+    flex-wrap: wrap; /* เพิ่ม flex-wrap เพื่อให้เลื่อนลงเมื่อพื้นที่ไม่เพียงพอ */
 }
 
-img {
+.profile-details {
+    display: flex;
+    align-items: center;
+}
+
+.profileuser {
     border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px; 
+    border: 2px solid #F2E8C6;
 }
 
-.point-btn{
-    background: #fbca1f;
-    font-family: inherit;
-    padding: 0.6em 1.3em;
-    font-weight: 900;
-    font-size: 18px;
-    border: 3px solid black;
-    border-radius: 0.4em;
-    box-shadow: 0.1em 0.1em;
-    cursor: pointer;
-    margin-bottom: 20px;
-    margin: 20px;
+.profile-info h2 {
+    font-size: 1.8em;
+    color: #f39c12;
 }
 
-.editprofile-btn {
-    background: #fbca1f;
-    font-family: inherit;
-    padding: 0.6em 1.3em;
-    font-weight: 900;
-    font-size: 18px;
-    border: 3px solid black;
-    border-radius: 0.4em;
-    box-shadow: 0.1em 0.1em;
-    cursor: pointer;
-    margin-bottom: 20px;
+.profile-info p {
+    font-size: 1.2em;
+    margin-top: 5px;
 }
 
-.btn-gencode {
-    justify-content: center;
-    align-items: center;
+.stats-box h3, .activity-box h3, .news-box h3 {
+    color: #f39c12;
+    margin-bottom: 10px;
+}
+
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+#ac {
+    color: white;
+}
+
+#point, #badges-count, #badges-count, #total-points ,#completed-quests {
+    color:white;
+}
+
+.news-content {
+    background-color: #070A52;
+    padding: 10px;
+    border-radius: 5px;
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #f39c12;
+    overflow: auto;
+}
+
+.news-content::-webkit-scrollbar {
+    display: none;
+}
+
+.content-row {
     display: flex;
-    margin-top: 300px;
+    flex-wrap: wrap; /* เพิ่ม flex-wrap เพื่อให้มีการเลื่อนลงเมื่อพื้นที่ไม่เพียงพอ */
 }
 
-.btn {
-    display: block;
-    padding: 0.7em 1em;
-    background: transparent;
-    outline: none;
-    border: 0;
-    color: #d4af37;
-    letter-spacing: 0.1em;
-    font-family: monospace;
-    font-size: 17px;
-    font-weight: bold;
-    z-index: 1;
-}
-
-.cube {
-    position: relative;
-    transition: all 0.5s;
-}
-
-.cube .bg-top {
-    position: absolute;
-    height: 10px;
-    background: #d4af37;
-    bottom: 100%;
-    left: 5px;
-    right: -5px;
-    transform: skew(-45deg, 0);
-    margin: 0;
-    transition: all 0.4s;
-}
-
-.cube .bg-top .bg-inner {
-    bottom: 0;
-}
-
-.cube .bg {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    background: #d4af37;
-    transition: all 0.4s;
-}
-
-.cube .bg-right {
-    position: absolute;
-    background: #d4af37;
-    top: -5px;
-    z-index: 0;
-    bottom: 5px;
-    width: 10px;
-    left: 100%;
-    transform: skew(0, -45deg);
-    transition: all 0.4s;
-}
-
-.cube .bg-right .bg-inner {
-    left: 0;
-}
-
-.cube .bg-inner {
-    background: #28282d;
-    position: absolute;
-    left: 2px;
-    right: 2px;
-    top: 2px;
-    bottom: 2px;
-}
-
-.cube .text {
-    position: relative;
-    transition: all 0.4s;
-}
-
-.cube:hover .bg-inner {
-    background: #d4af37;
-    transition: all 0.4s;
-}
-
-.cube:hover .text {
-    color: #28282d;
-    transition: all 0.4s;
-}
-
-.cube:hover .bg-right,
-.cube:hover .bg,
-.cube:hover .bg-top {
-background: #28282d;
-}
-
-.cube:active {
-    z-index: 9999;
-    animation: bounce .1s linear;
-}
-
-.input-kceiei {
-    justify-content: center;
-    align-items: center;
+.left-column {
     display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-right: 20px;
 }
 
-@keyframes bounce {
-    50% {
-        transform: scale(0.9);
+.news-box {
+    flex: 1;
+    width: 690px; /* เพิ่มขนาดขั้นต่ำเพื่อให้เป็น responsive */
+
+}
+
+.stats-box, .activity-box {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* ปุ่มแก้ไขโปรไฟล์ */
+.edit-profile-btn {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.edit-profile-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Media Queries สำหรับ Responsive */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column; /* จัดให้เป็นคอลัมน์ในหน้าจอเล็ก */
+        align-items: flex-start; /* จัดตำแหน่งให้ซ้าย */
+    }
+
+    .profile-details {
+        margin-bottom: 10px; /* เพิ่มระยะห่างด้านล่าง */
+    }
+
+    .left-column {
+        width: 100%; /* ปรับความกว้างให้เต็ม */
+        margin-right: 0; /* ยกเลิกการใช้ margin */
+    }
+
+    .content-row {
+        flex-direction: column; /* จัดเรียงเป็นคอลัมน์ */
+    }
+
+    .news-box {
+        width: 100%; /* ปรับความกว้างให้เต็ม */
     }
 }
 
-.btn-gencode {
-    margin-top: -1px;
-    justify-content: center;
-    align-items: centers;
+@media (max-width: 480px) {
+    .avatar {
+        width: 80px; /* ลดขนาดของ avatar */
+        height: 80px;
+    }
+
+    .profile-info h2 {
+        font-size: 1.5em; /* ปรับขนาดตัวอักษร */
+    }
+
+    .profile-info p {
+        font-size: 1em; /* ปรับขนาดตัวอักษร */
+    }
+
+    .edit-profile-btn {
+        width: 100%; /* ให้ปุ่มเต็มความกว้าง */
+    }
 }
+
+
+
+
+
+

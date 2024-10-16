@@ -23,6 +23,11 @@ if ($query->rowCount() > 0) {
     <title>Table score</title>
     <link rel="stylesheet" href="../public/css/navbar.css">
     <link rel="stylesheet" href="../public/css/tablescore.css">
+    <style>
+        tbody {
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <div class="wrapper">
@@ -54,15 +59,18 @@ if ($query->rowCount() > 0) {
         <table id="customers">
             <thead>
                 <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Score</th>
+                    <th>ลำดับ</th>
+                    <th>ชื่อ</th>
+                    <th>นามสกุล</th>
+                    <th>คะแนน</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
+                    $rank = 1;
                     foreach ($data as $row) {
                         echo "<tr>
+                        <td>" . $rank++ ."</td>
                         <td>" . htmlspecialchars($row["fname"]) . "</td>
                         <td>" . htmlspecialchars($row["lname"]) . "</td>
                         <td>" . htmlspecialchars($row["point"]) . "</td>
@@ -73,7 +81,41 @@ if ($query->rowCount() > 0) {
             </table>
     </div>
     
-    <script src="../public/js/fetchscore.js"></script>
     <script src="../public/js/readQr.js"></script>
+    <script src="../public/js/scroll.js"></script>
+    <script>
+        function fetchScores() {
+            fetch('../config/fetch_scores.php')
+            .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+        return response.json();
+        })
+
+            .then(data => {
+                const tbody = document.querySelector('#scoreTable tbody');
+                tbody.innerHTML = ''; // เคลียร์ข้อมูลเก่า
+                var rank = 1;
+                data.forEach(row => {
+                    tbody.innerHTML += `<tr>
+                    <td>${row.rank++}</td>
+                    <td>${row.fname}</td>
+                    <td>${row.lname}</td>
+                    <td>${row.point}</td>
+                    </tr>`;
+                });
+            })
+            
+            .catch(error => console.error('Error fetching scores:', error));
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchScores(); // เรียกใช้ฟังก์ชันเมื่อโหลดหน้า
+            setInterval(fetchScores, 5000); // อัปเดตทุก 5 วินาที
+        });
+
+
+    </script>
 </body>
 </html>
