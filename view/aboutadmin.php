@@ -50,14 +50,13 @@
             </div>
             <div class="nav-menu" id="navMenu">
                 <ul>
-                    <li><a href="index.php" class="link active">หน้าแรก</a></li>
-                    <li><a href="tablepoint.php" class="link">ตารางคะแนน</a></li>
-                    <li><a href="gif.php" class="link">แลกของรางวัล</a></li>
-                    <li><a href="about.php" class="link">เกี่ยวกับ</a></li>
+                    <li><a href="admin.php" class="link active">สร้าง Qr code</a></li>
+                    <li><a href="gifko.php" class="link">หน้าต่างคำขอ</a></li>
+                    <li><a href="tableadmin.php" class="link">ตารางคะแนน</a></li>
+                    <li><a href="aboutadmin.php" class="link">เกี่ยวกับ</a></li>
                 </ul>
             </div>
             <div class="nav-button">
-                <button class="btn-out" id="readQr">แสกน QR</button>
                 <button class="btn-out">
                     <a href="../config/logout.php" class="out">ออกจากระบบ</a>
                 </button>

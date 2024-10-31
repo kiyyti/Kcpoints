@@ -1,9 +1,9 @@
 <?php
 session_start();
-require_once "../config/db.php"; // เชื่อมต่อฐานข้อมูล
+require_once "../config/db.php";
 
-// ดึงข้อมูลคะแนนจากฐานข้อมูล
-$query = $conn->prepare("SELECT fname, lname, point FROM users ORDER BY point DESC");
+
+$query = $conn->prepare("SELECT p_name, class, tel FROM gif");
 $query->execute();
 $data = [];
 if ($query->rowCount() > 0) {
@@ -11,7 +11,7 @@ if ($query->rowCount() > 0) {
         $data[] = $row;
     }
 } else {
-    $data = []; // ถ้าไม่มีข้อมูล
+    $data = []; 
 }
 ?>
 
@@ -44,15 +44,15 @@ if ($query->rowCount() > 0) {
             </div>
             <div class="nav-menu" id="navMenu">
                 <ul>
-                    <li><a href="index.php" class="link active">หน้าแรก</a></li>
-                    <li><a href="tablepoint.php" class="link">ตารางคะแนน</a></li>
-                    <li><a href="gif.php" class="link">แลกของรางวัล</a></li>
-                    <li><a href="about.php" class="link">เกี่ยวกับ</a></li>
+                    <li><a href="admin.php" class="link active">สร้าง Qr code</a></li>
+                    <li><a href="gifko.php" class="link">หน้าต่างคำขอ</a></li>
+                    <li><a href="tableadmin.php" class="link">ตารางคะแนน</a></li>
+                    <li><a href="aboutadmin.php" class="link">เกี่ยวกับ</a></li>
                 </ul>
             </div>
             <div class="nav-button">
                 
-                <button class="btn-out" id="readQr">แสกน QR</button>
+
                 <button class="btn-out">
                     <a href="../config/logout.php" class="out">ออกจากระบบ</a>
                 </button>
@@ -64,9 +64,11 @@ if ($query->rowCount() > 0) {
             <thead>
                 <tr>
                     <th>ลำดับ</th>
-                    <th>ชื่อ</th>
-                    <th>นามสกุล</th>
-                    <th>คะแนน</th>
+                    <th>คำขอ</th>
+                    <th>ชื่อ-นามสกุล</th>
+                    <th>ชั้น-ห้อง</th>
+                    <th>เบอร์โทรศัพท์</th>
+                    <th>สถานะ</th>
                 </tr>
             </thead>
             <tbody>
@@ -75,9 +77,11 @@ if ($query->rowCount() > 0) {
                     foreach ($data as $row) {
                         echo "<tr>
                         <td>" . $rank++ ."</td>
-                        <td>" . htmlspecialchars($row["fname"]) . "</td>
-                        <td>" . htmlspecialchars($row["lname"]) . "</td>
-                        <td>" . htmlspecialchars($row["point"]) . "</td>
+                        <td>" . htmlspecialchars("เสื้อแขนยาวโรงเรียน")."</td>
+                        <td>" . htmlspecialchars($row["p_name"]) . "</td>
+                        <td>" . htmlspecialchars($row["class"]) . "</td>
+                        <td>" . htmlspecialchars($row["tel"]) . "</td>
+                        <td>" . htmlspecialchars("ยังไม่สำเร็จ") . "</td>
                         </tr>";
                     }
                 ?>

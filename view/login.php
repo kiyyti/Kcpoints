@@ -15,6 +15,17 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../public/js/sw2.js"></script>
     <title>Login & Registration</title>
+    <style>
+        tbody {
+            color: white;
+        }
+
+        * {
+            font-family: 'Mali', sans-serif;
+        }
+
+        
+    </style>
 </head>
 <body>
 <div class="wrapper">
@@ -77,11 +88,11 @@
                 <div class="two-col">
                     <div class="one">
                         <input type="checkbox" id="login-check">
-                        <label for="login-check">จดจำรหัสผ่าน</label>
+                        <label for="login-check" class="member">จดจำรหัสผ่าน</label>
                     </div>
             </form>
                 <div class="two">
-                    <span>หากคุณยังไม่ได้สมัครบัญชีกรุณา<a href="#" onclick="register()" style="color: white;">สมัครสมาชิก</a></span>
+                    <span clss="regi">หากคุณยังไม่ได้สมัครบัญชีกรุณา <a href="#" onclick="register()" style="color: white;">สมัครสมาชิก</a></span>
                 </div>
             </div>
     </div>
@@ -110,7 +121,7 @@
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-box">
-                <button type="submit" class="submit" name="submit">สมัครสมาชิก  </button>
+                <button type="submit" class="submit" name="submit">สมัครสมาชิก</button>
             </div>
         </form>
             <div class="two-col">

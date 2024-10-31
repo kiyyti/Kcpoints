@@ -28,7 +28,7 @@
                     if ($email == $row['email']) {
                         if (password_verify($password , $row['stid'])) {
                             if ($row['urole'] == 'admin') {
-                                header('location: ../view/admin.html');
+                                header('location: ../view/admin.php');
                                 $_SESSION['success'] = 'ยินดีต้อนรับเข้าสู่ระบบ';
                             } else if ($row["urole"] == 'user') {
                                 $_SESSION['success'] = 'ยินดีต้อนรับเข้าสู่ระบบ';

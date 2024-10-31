@@ -6,6 +6,14 @@ function showError(ermessage) {
     });
 }
 
+function adminError(admessage) {
+    Swal.fire({
+        icon: "error",
+        title: "ผิดพลาด",
+        text: admessage
+    });
+}
+
 function showSuccess(scmessage) {
     Swal.fire({
         icon: "success",
@@ -21,3 +29,5 @@ function logouts() {
         text: "คุณได้ออกจากระบบแล้ว"
         });
 }
+
+

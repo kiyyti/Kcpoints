@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 div {
-display: block;
+    display: block;
 }
 
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mali', sans-serif;
 }
 
 body {
@@ -37,7 +38,7 @@ body::-webkit-scrollbar {
     width: 100%;
 }
 .box:hover {
-transform: scale(1.02); /* เมื่อชี้เมาส์จะขยาย */
+    transform: scale(1.02);
 }
 
 .profile-header {
@@ -57,7 +58,7 @@ transform: scale(1.02); /* เมื่อชี้เมาส์จะขย�
     width: 100px;
     height: 100px;
     margin-right: 20px; 
-    border: 2px solid #F2E8C6;
+    border: 3px solid #F2E8C6;
 }
 
 .profile-info h2 {
@@ -129,7 +130,6 @@ li {
     margin-bottom: 20px;
 }
 
-/* ปุ่มแก้ไขโปรไฟล์ */
 .edit-profile-btn {
     padding: 10px 20px;
     background-color: #e74c3c;
@@ -145,52 +145,55 @@ li {
     background-color: #c0392b;
 }
 
-/* Media Queries สำหรับ Responsive */
-@media (max-width: 768px) {
-    .profile-header {
-        flex-direction: column; /* จัดให้เป็นคอลัมน์ในหน้าจอเล็ก */
-        align-items: flex-start; /* จัดตำแหน่งให้ซ้าย */
+.stats-box {
+    width: 300px;
+    height: 200px;
+    h3 {
+        font-size: 30px;
     }
 
-    .profile-details {
-        margin-bottom: 10px; /* เพิ่มระยะห่างด้านล่าง */
-    }
-
-    .left-column {
-        width: 100%; /* ปรับความกว้างให้เต็ม */
-        margin-right: 0; /* ยกเลิกการใช้ margin */
-    }
-
-    .content-row {
-        flex-direction: column; /* จัดเรียงเป็นคอลัมน์ */
-    }
-
-    .news-box {
-        width: 100%; /* ปรับความกว้างให้เต็ม */
+    #completed-quests, #total-points, #badges-count {
+        font-size: 25px;
     }
 }
 
-@media (max-width: 480px) {
-    .avatar {
-        width: 80px; /* ลดขนาดของ avatar */
-        height: 80px;
+@media (max-width: 376px) {
+    .wrapper {
+        width: 105vh;
     }
-
-    .profile-info h2 {
-        font-size: 1.5em; /* ปรับขนาดตัวอักษร */
+    
+    .content {
+        display: block;
+        width: 100%;
     }
-
-    .profile-info p {
-        font-size: 1em; /* ปรับขนาดตัวอักษร */
+    
+    .profile-container {
+        padding-top: 15vh;
     }
 
     .edit-profile-btn {
-        width: 100%; /* ให้ปุ่มเต็มความกว้าง */
+        margin-left: 18vh;
+        padding: 10px 20px;
     }
+
+    .box .profile-header {
+        width: 400px;
+        
+        .profileuser {
+            width: 100px;
+            height: 100px;
+        }
+
+        .username {
+            font-size: 30px;
+        }
+
+        #point {
+            font-size: 28px
+        }
+
+        
+    }
+
+    
 }
-
-
-
-
-
-

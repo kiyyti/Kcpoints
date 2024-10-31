@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 html {
     box-sizing: border-box;
 }
@@ -8,6 +9,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow: flex;
+    
 }
 
 body::-webkit-scrollbar {
@@ -18,7 +20,7 @@ body::-webkit-scrollbar {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Mali', sans-serif;
 }
 
 *, *:before, *:after {

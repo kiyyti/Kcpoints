@@ -1,6 +1,7 @@
 <?php
     session_start();
     require_once "../config/db.php";
+    require_once "../config/gifdb.php";
 
     if (isset($_SESSION['Email'])) {
         $useremail = $_SESSION['Email'];
@@ -29,6 +30,13 @@
     <title>Redeem rewards</title>
     <link rel="stylesheet" href="../public/css/navbar.css">
     <link rel="stylesheet" href="../public/css/gifaward.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../public/js/sw2.js"></script>
+    <style>
+        * {
+            font-family: 'Mali', sans-serif;
+        }
+    </style>
 </head>
 <body>
     <div class="wrapper">
@@ -392,12 +400,12 @@
     </div>
 
     <div id="formgif" class="gifform">
-            <form action="#" class="form">
+            <form action="../config/gifac.php" method="post" class="form">
                 <div class="container">
                     <h1>แลกของรางวัล</h1>
                     <hr>
                     <label for="name"><b>ชื่อ-นามสกุล</b></label>
-                    <input type="text" name="name" placeholder="นาย/นางสาว ชื่อ นามสกุล" require>
+                    <input type="text" name="name" placeholder="นาย/นางสาว ชื่อ นามสกุล">
 
                     <label for="floor"><b>ชั้น ห้อง เลขที่</b></label>
                     <input type="text" name="floor" placeholder="ชั้นม.6 ห้อง * เลขที่ *">
@@ -407,7 +415,7 @@
 
                     <div class="clearfix">
                         <button type="button" id="no" onclick="document.getElementById('formgif').style.display='none'">ยกเลิก</button>
-                        <button type="submit" id="yes">แลกรางวัล</button>
+                        <button type="submit" id="yes" name="submit">แลกรางวัล</button>
                     </div>
                 </div>
             </form>
