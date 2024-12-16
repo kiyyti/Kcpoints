@@ -169,3 +169,31 @@
     color: #555;
     cursor: pointer;
 }
+
+
+@media (max-width: 376px) {
+    .success ,.alert ,.error{
+        width: 570px;
+        height: 80px;
+    }
+
+    .message-text-success, .message-text-alert, .message-text-error {
+        font-size: 30px;
+    }
+
+    .icon_success, .icon_alert, .icon_error{
+        height: 30px;
+        width: 30px;
+    }
+
+    .icon-container-success ,.icon-container-error, .icon-container-alert{
+        width: 40px;
+        height: 40px;
+    }
+
+    
+
+    .sub-text {
+        font-size: 20px;
+    }
+}

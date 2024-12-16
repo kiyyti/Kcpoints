@@ -41,6 +41,8 @@ body::-webkit-scrollbar {
     transform: scale(1.02);
 }
 
+
+
 .profile-header {
     display: flex;
     justify-content: space-between;
@@ -145,55 +147,389 @@ li {
     background-color: #c0392b;
 }
 
-.stats-box {
-    width: 300px;
-    height: 200px;
-    h3 {
-        font-size: 30px;
-    }
+.respon-qr-homepage {
+    display: none;
+}
 
-    #completed-quests, #total-points, #badges-count {
-        font-size: 25px;
-    }
+.content-respon {
+    display:none
+}
+
+.achive-respon, .stats-respon, .scanner-respon {
+    display: none;
 }
 
 @media (max-width: 376px) {
-    .wrapper {
-        width: 105vh;
-    }
-    
     .content {
+        display: none;
+    }
+
+    .achive-respon, .stats-respon, .scanner-respon {
         display: block;
-        width: 100%;
-    }
-    
-    .profile-container {
-        padding-top: 15vh;
     }
 
-    .edit-profile-btn {
-        margin-left: 18vh;
+    .scanner-respon:active, .achive-respon:active, .stats-respon:active {
+        background-color: #BB0029;
+    }
+
+    .content-respon {
+        display: block;
+        justify-content: center;
+        text-align: center;
+        line-height: 3vh;
+        margin-top: -20vh;
+    }
+
+    @media (min-height: 700px) {
+        .content-respon {
+            margin-top: -35vh;
+        }
+
+        .achive-respon , .stats-respon, .scanner-respon{
+            transform: translateY(-12vh);
+        }
+
+        .acitivity-respon {
+            transform: translateY(-30vh);
+        }
+
+        .achive-respon {
+            margin-top: -35rem;
+        }
+    }
+
+    .profile-respon {
+        background-color: #03002C;
+        backdrop-filter: blur(50px);
+        padding: 40px;
+        padding-top: 10vh;
+        border-radius: 10px;
+        border: 2px solid #BB0029;
+    }
+
+    .profileuser-respon {
+        width: 150px;
+        height: 150px;
+        margin-top: -4vh;
+        margin-bottom: 4vh;
+        border-radius: 10px;
+        border: 2px solid #f39c12;
+    }
+
+    .edit-profile-respon {
+        border: none; 
+        background: none; 
+        padding: 0;
+    }
+
+    .profile-info-respon h2{
+        font-size: 1.8em;
+        color: #f39c12;
+    }
+
+    .profile-info-respon p {
+        font-size: 1.5em;
+        color: white;
+    }
+
+    .edit-profile-btn-respon {
         padding: 10px 20px;
+        background-color: #e74c3c;
+        margin-top: 4vh;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.3s ease;
     }
 
-    .box .profile-header {
-        width: 400px;
-        
-        .profileuser {
-            width: 100px;
-            height: 100px;
-        }
-
-        .username {
-            font-size: 30px;
-        }
-
-        #point {
-            font-size: 28px
-        }
-
-        
+    .achive-respon {
+        text-align: center;
+        background: #03002C;
+        height: 8vh;
+        width: 92%;
+        margin: 0 auto;
+        border-radius: 10px;
     }
 
-    
+    .activity-respon {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        border-radius: 10px;
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: -35vh;
+        border-radius: 10px;
+        border: 2px solid #f39c12;
+    }
+
+    .achive-text {
+        color: white;
+    }
+
+    .achive-svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .stats-respon {
+        text-align: center;
+        background: #03002C;
+        height: 8vh;
+        width: 92%;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    .stats-btn {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        border-radius: 10px;
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 2vh;
+        border-radius: 10px;
+        border: 2px solid #f39c12;
+    }
+
+    .stats-text {
+        color: white;
+    }
+
+    .stats-svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .scanner-respon {
+        text-align: center;
+        background: #03002C;
+        height: 8vh;
+        width: 92%;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    .scanner-btn {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        border-radius: 10px;
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 2vh;
+        border-radius: 10px;
+        border: 2px solid #f39c12;
+    }
+
+    .scanner-text {
+        color: white;
+    }
+
+    .scanner-svg {
+        width: 30px;
+        height: 30px;
+    }
 }
+
+@media (min-width: 377px) and (max-width: 427px) {
+    .content {
+        display: none;
+    }
+
+    .achive-respon, .stats-respon, .scanner-respon {
+        display: block;
+    }
+
+    .scanner-respon:active, .achive-respon:active, .stats-respon:active {
+        background-color: #BB0029;
+    }
+
+    .content-respon {
+        display: block;
+        justify-content: center;
+        text-align: center;
+        line-height: 3vh;
+        margin-top: -20vh;
+    }
+
+    @media (min-height: 700px) {
+        .content-respon {
+            margin-top: -35vh;
+        }
+
+        .achive-respon , .stats-respon, .scanner-respon{
+            transform: translateY(-12vh);
+        }
+
+        .acitivity-respon {
+            transform: translateY(-30vh);
+        }
+
+        .achive-respon {
+            margin-top: -35rem;
+        }
+    }
+
+    .profile-respon {
+        background-color: #03002C;
+        backdrop-filter: blur(50px);
+        padding: 50px;
+        padding-top: 10vh;
+        border-radius: 10px;
+        border: 2px solid #BB0029;
+    }
+
+    .profileuser-respon {
+        width: 150px;
+        height: 150px;
+        margin-top: -4vh;
+        margin-bottom: 4vh;
+        border-radius: 10px;
+        border: 2px solid #f39c12;
+    }
+
+    .edit-profile-respon {
+        border: none; 
+        background: none; 
+        padding: 0;
+    }
+
+    .profile-info-respon h2{
+        font-size: 1.8em;
+        color: #f39c12;
+    }
+
+    .profile-info-respon p {
+        font-size: 1.5em;
+        color: white;
+    }
+
+    .edit-profile-btn-respon {
+        padding: 10px 20px;
+        background-color: #e74c3c;
+        margin-top: 4vh;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.3s ease;
+    }
+
+    .achive-respon {
+        text-align: center;
+        background: #03002C;
+        height: 8vh;
+        width: 92%;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    .activity-respon {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        border-radius: 10px;
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: -35vh;
+        border-radius: 10px;
+        border: 2px solid #f39c12;
+    }
+
+    .achive-text {
+        color: white;
+    }
+
+    .achive-svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .stats-respon {
+        text-align: center;
+        background: #03002C;
+        height: 8vh;
+        width: 92%;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    .stats-btn {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        border-radius: 10px;
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 2vh;
+        border-radius: 10px;
+        border: 2px solid #f39c12;
+    }
+
+    .stats-text {
+        color: white;
+    }
+
+    .stats-svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .scanner-respon {
+        text-align: center;
+        background: #03002C;
+        height: 8vh;
+        width: 92%;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    .scanner-btn {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        border-radius: 10px;
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 2vh;
+        border-radius: 10px;
+        border: 2px solid #f39c12;
+    }
+
+    .scanner-text {
+        color: white;
+    }
+
+    .scanner-svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+

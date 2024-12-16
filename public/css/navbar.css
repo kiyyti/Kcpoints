@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
 
 .btn-out a, .btn-out, .nav .nav-menu ul li a{
     font-family: 'Mali', sans-serif;
@@ -6,6 +7,14 @@
 
 .logoschool {
     padding-top: 15px;
+}
+
+.nav-menu-btn {
+    display: none;
+}
+
+.respon-link {
+    display: none;
 }
 
 .wrapper {
@@ -103,6 +112,43 @@
         display: none;
     }
 
+    .nav {
+        display: flex;
+        align-items: center; 
+        backdrop-filter: blur(20px);
+        background-color: #BB0029;
+        width: 95%;
+        padding: 10px 40px;
+        border-radius: 10px;
+        justify-content: space-between;
+        height: 11.5vh;
+        line-height: 60px;
+        margin-top: 20px;
+    }
+
+    .logoschool, .nav-menu-btn i {
+        display: flex;
+        text-align: center;
+    }
+
+    .logoschool {
+        width: 45px;
+        height: 70px;   
+        margin-top: -2vh;
+    }
+
+    .nav-menu-btn i {
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+        transition: .3s;
+        z-index: 1000;
+    }
+
+    .respon-link {
+        display: block;
+    }
+
     .nav-menu.responsive {
         top: 100px;
     }
@@ -111,25 +157,56 @@
         position: absolute;
         top: 1000vh;
         display: flex;
-        background-color: #f5f5f5;
-        width: 60%;
-        height: 30vh;
-        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.9); 
+        backdrop-filter: blur(100px); 
+        width: 100%;
+        height: 68vh;
+        border-radius: 15px;
         transition: .3s;
         flex-direction: column;
-        right: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: -2vh;
+        left: 0.2%;
     }
 
+    @media (min-height: 700px) {
+        .nav-menu {
+            height: 54vh;
+            margin-top: -1.2vh;
+        }
+
+        .nav {
+            height: 9vh;
+        }
+
+        .logoschool {
+            width: 45px;
+            height: 70px;
+        }
+
+        .nav-menu-btn i {
+            font-size: 26px;
+        }
+    }
 
     .nav-menu ul {
         flex-direction: column;
         text-align: center;
+        margin-top: 2vh;
     }
 
     .nav-menu ul li {
         width: 100%;
-        margin-top: -15px;
-        height: 9vh;
+        gap: 100rem;
+        font-weight: 500;
+        font-size: 28px;
+        margin-bottom: 10px;
+        line-height: 2;
+    }
+
+    .nav-menu ul li .link {
+        color: #BB0029;
     }
     
     .nav-menu ul li .link:hover {
@@ -139,27 +216,73 @@
     .nav-menu-btn {
         display: block;
     }
-    
-    .nav-menu-btn i {
-        font-size: 25px;
-        color: #fff;
-        padding: 10px;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 50%;
+
+    .respon-qr, .respon-out {
+        background: #fbca1f;
+        padding: 0.6em 1.3em;
+        font-weight: 900;
+        font-size: 24px;
+        border: 3px solid black;
+        border-radius: 10px;
         cursor: pointer;
-        transition: .3s;
+        width: 19rem;
+        margin-bottom: 5px;
+        color: #BB0029;
     }
 
-    .nav-menu-btn i:hover {
-        background: rgba(255, 255, 255, 0.15);
+    .respon-out a{
+        text-decoration: none;
+        color: #BB0029;
+    }
+    
+    .respon-link:active {
+        transform: translate(0.05em, 0.05em);
+        box-shadow: 0.05em 0.05em;
     }
 }
 
-@media (min-width: 377px) and (max-width: 427px) {
+@media (min-width: 377px) and (max-width: 426px) {
     .nav-button {
         display: none;
     }
 
+    .nav {
+        display: flex;
+        align-items: center; 
+        backdrop-filter: blur(20px);
+        background-color: #BB0029;
+        width: 95%;
+        padding: 10px 40px;
+        border-radius: 10px;
+        justify-content: space-between;
+        height: 11.5vh;
+        line-height: 60px;
+        margin-top: 20px;
+    }
+
+    .logoschool, .nav-menu-btn i {
+        display: flex;
+        text-align: center;
+    }
+
+    .logoschool {
+        width: 45px;
+        height: 70px;   
+        margin-top: -2vh;
+    }
+
+    .nav-menu-btn i {
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+        transition: .3s;
+        z-index: 1000;
+    }
+
+    .respon-link {
+        display: block;
+    }
+
     .nav-menu.responsive {
         top: 100px;
     }
@@ -168,26 +291,56 @@
         position: absolute;
         top: 1000vh;
         display: flex;
-        background-color: #f5f5f5;
-        width: 50%;
-        height: 23vh;
-        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.9); 
+        backdrop-filter: blur(100px); 
+        width: 100%;
+        height: 68vh;
+        border-radius: 15px;
         transition: .3s;
         flex-direction: column;
-        right: 20px;
-        margin-top: 25px;
+        justify-content: center;
+        align-items: center;
+        margin-top: -2vh;
+        left: 0.2%;
+    }
+
+    @media (min-height: 700px) {
+        .nav-menu {
+            height: 54vh;
+            margin-top: -1.2vh;
+        }
+
+        .nav {
+            height: 9vh;
+        }
+
+        .logoschool {
+            width: 45px;
+            height: 65px;
+        }
+
+        .nav-menu-btn i {
+            font-size: 26px;
+        }
     }
 
     .nav-menu ul {
         flex-direction: column;
         text-align: center;
+        margin-top: 2vh;
     }
 
     .nav-menu ul li {
         width: 100%;
-        margin-top: -15px;
-        height: 7vh;
-        
+        gap: 100rem;
+        font-weight: 500;
+        font-size: 28px;
+        margin-bottom: 10px;
+        line-height: 2;
+    }
+
+    .nav-menu ul li .link {
+        color: #BB0029;
     }
     
     .nav-menu ul li .link:hover {
@@ -197,33 +350,73 @@
     .nav-menu-btn {
         display: block;
     }
-    
-    .logoschool {
-        width: 65px;
-        padding-top: 38px;
-    }
 
-    .nav-menu-btn i {
-        font-size: 40px;
-        color: #fff;
-        padding: 15px;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 50%;
+    .respon-qr, .respon-out {
+        background: #fbca1f;
+        padding: 0.6em 1.3em;
+        font-weight: 900;
+        font-size: 24px;
+        border: 3px solid black;
+        border-radius: 10px;
         cursor: pointer;
-        margin-top: 45px;
-        transition: .3s;
+        width: 19rem;
+        margin-bottom: 5px;
+        color: #BB0029;
     }
 
-    .nav-menu-btn i:hover {
-        background: rgba(255, 255, 255, 0.15);
+    .respon-out a{
+        text-decoration: none;
+        color: #BB0029;
+    }
+    
+    .respon-link:active {
+        transform: translate(0.05em, 0.05em);
+        box-shadow: 0.05em 0.05em;
     }
 }
 
-@media (min-width: 428px) and (max-width: 768px) {
+@media (min-width: 427px) and (max-width: 768px) {
     .nav-button {
         display: none;
     }
 
+    .nav {
+        display: flex;
+        align-items: center; 
+        backdrop-filter: blur(20px);
+        background-color: #BB0029;
+        width: 95%;
+        padding: 10px 40px;
+        border-radius: 10px;
+        justify-content: space-between;
+        height: 11.5vh;
+        line-height: 60px;
+        margin-top: 20px;
+    }
+
+    .logoschool, .nav-menu-btn i {
+        display: flex;
+        text-align: center;
+    }
+
+    .logoschool {
+        width: 45px;
+        height: 70px;   
+        margin-top: -2vh;
+    }
+
+    .nav-menu-btn i {
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+        transition: .3s;
+        z-index: 1000;
+    }
+
+    .respon-link {
+        display: block;
+    }
+
     .nav-menu.responsive {
         top: 100px;
     }
@@ -232,26 +425,57 @@
         position: absolute;
         top: 1000vh;
         display: flex;
-        background-color: #f5f5f5;
-        width: 50%;
-        height: 23vh;
-        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.9); 
+        backdrop-filter: blur(100px); 
+        width: 100%;
+        height: 68vh;
+        border-radius: 15px;
         transition: .3s;
         flex-direction: column;
-        right: 20px;
-        margin-top: 28px;
+        justify-content: center;
+        align-items: center;
+        margin-top: -2vh;
+        left: 0.2%;
+    }
+
+    @media (min-height: 700px) {
+        .nav-menu {
+            height: 53vh;
+            margin-top: -1.2vh;
+        }
+
+
+        .nav {
+            height: 9vh;
+        }
+
+        .logoschool {
+            width: 45px;
+            height: 65px;
+        }
+
+        .nav-menu-btn i {
+            font-size: 26px;
+        }
     }
 
     .nav-menu ul {
         flex-direction: column;
         text-align: center;
+        margin-top: -5vh;
     }
 
     .nav-menu ul li {
         width: 100%;
-        margin-top: -15px;
-        height: 7vh;
-        
+        gap: 100rem;
+        font-weight: 500;
+        font-size: 28px;
+        margin-bottom: 10px;
+        line-height: 2;
+    }
+
+    .nav-menu ul li .link {
+        color: #BB0029;
     }
     
     .nav-menu ul li .link:hover {
@@ -261,24 +485,27 @@
     .nav-menu-btn {
         display: block;
     }
-    
-    .logoschool {
-        width: 70px;
-        padding-top: 40px;
-    }
 
-    .nav-menu-btn i {
-        font-size: 40px;
-        color: #fff;
-        padding: 15px;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 50%;
+    .respon-qr, .respon-out {
+        background: #fbca1f;
+        padding: 0.6em 1.3em;
+        font-weight: 900;
+        font-size: 24px;
+        border: 3px solid black;
+        border-radius: 10px;
         cursor: pointer;
-        margin-top: 49px;
-        transition: .3s;
+        width: 19rem;
+        margin-bottom: 5px;
+        color: #BB0029;
     }
 
-    .nav-menu-btn i:hover {
-        background: rgba(255, 255, 255, 0.15);
+    .respon-out a{
+        text-decoration: none;
+        color: #BB0029;
+    }
+    
+    .respon-link:active {
+        transform: translate(0.05em, 0.05em);
+        box-shadow: 0.05em 0.05em;
     }
 }

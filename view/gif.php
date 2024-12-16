@@ -32,11 +32,7 @@
     <link rel="stylesheet" href="../public/css/gifaward.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../public/js/sw2.js"></script>
-    <style>
-        * {
-            font-family: 'Mali', sans-serif;
-        }
-    </style>
+    <script src="../public/js/nav.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -53,13 +49,22 @@
                     <li><a href="tablepoint.php" class="link">ตารางคะแนน</a></li>
                     <li><a href="gif.php" class="link">แลกของรางวัล</a></li>
                     <li><a href="about.php" class="link">เกี่ยวกับ</a></li>
+                    <li class="respon-link"><button id="readQr" class="respon-qr">แสกน Qr</button></li>
+                    <li class="respon-link">
+                        <button id="btn-out" class="respon-out">
+                            <a href="../config/logout.php">ออกจากระบบ</a>
+                        </button>
+                    </li>
                 </ul>
             </div>
-            <div class="nav-button">
+            <div class="nav-button" >
                 <button class="btn-out" id="readQr" >แสกน QR</button>
-                <button class="btn-out" id="registerBtn">
+                <button class="btn-out">
                     <a href="../config/logout.php" class="out">ออกจากระบบ</a>
                 </button>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
             </div>
             
         </nav>
@@ -70,7 +75,7 @@
             <div class="column1">
                 <div class="card">
                     <div class="card-img">
-                        <img src="../public/picture/moodang.jpg" style="width:164px;border-radius: 4px;">
+                        <img src="../public/picture/moodang.jpg" class="img-card">
                     </div>
                     <div class="card-info">
                         <p class="text-title">หมูเด้ง </p>
@@ -78,7 +83,7 @@
                     </div>
                     <div class="card-footer">
                         <span class="text-title">50 point</span>
-                        <button class="card-button" onclick="document.getElementById('formgif').style.display='block'">
+                        <button class="card-button" onclick="document.getElementById('formgif').style.display='flex">
                             <svg class="svg-icon" viewBox="0 0 20 20">
                                 <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
                                 <path d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
@@ -92,7 +97,7 @@
             <div class="column1">
                 <div class="card">
                     <div class="card-img">
-                        <img src="../public/picture/moodang.jpg" style="width:164px;border-radius: 4px;">
+                        <img src="../public/picture/moodang.jpg" class="img-card">
                     </div>
                     <div class="card-info">
                         <p class="text-title">หมูเด้ง </p>
@@ -114,7 +119,7 @@
             <div class="column1">
                 <div class="card">
                     <div class="card-img">
-                        <img src="../public/picture/moodang.jpg" style="width:164px;border-radius: 4px;">
+                        <img src="../public/picture/moodang.jpg" class="img-card">
                     </div>
                     <div class="card-info">
                         <p class="text-title">หมูเด้ง </p>
@@ -136,7 +141,7 @@
             <div class="column1">
                 <div class="card">
                     <div class="card-img">
-                        <img src="../public/picture/moodang.jpg" style="width:164px;border-radius: 4px;">
+                        <img src="../public/picture/moodang.jpg" class="img-card">
                     </div>
                     <div class="card-info">
                         <p class="text-title">หมูเด้ง </p>
@@ -158,7 +163,7 @@
             <div class="column1">
                 <div class="card">
                     <div class="card-img">
-                        <img src="../public/picture/moodang.jpg" style="width:164px;border-radius: 4px;">
+                        <img src="../public/picture/moodang.jpg" class="img-card">
                     </div>
                     <div class="card-info">
                         <p class="text-title">หมูเด้ง </p>
@@ -180,7 +185,7 @@
             <div class="column1">
                 <div class="card">
                     <div class="card-img">
-                        <img src="../public/picture/smooty.jpg" style="width:164px;border-radius: 4px;height: 105px;">
+                        <img src="../public/picture/smooty.jpg" class="img-card">
                     </div>
                     <div class="card-info">
                         <p class="text-title">คูปองน้ำปั่น</p>
@@ -202,7 +207,7 @@
             <div class="column1">
                 <div class="card">
                     <div class="card-img">
-                    <img src="../public/picture/smooty.jpg" style="width:164px;border-radius: 4px;height: 105px;">
+                    <img src="../public/picture/smooty.jpg" class="img-card">
                     </div>
                     <div class="card-info">
                         <p class="text-title">คูปองน้ำปั่น</p>
@@ -224,7 +229,7 @@
             <div class="column1">
                 <div class="card">
                     <div class="card-img">
-                    <img src="../public/picture/smooty.jpg" style="width:164px;border-radius: 4px;height: 105px;">
+                    <img src="../public/picture/smooty.jpg" class="img-card">
                     </div>
                     <div class="card-info">
                         <p class="text-title">คูปองน้ำปั่น</p>
@@ -246,7 +251,7 @@
             <div class="column1">
                 <div class="card">
                     <div class="card-img">
-                    <img src="../public/picture/smooty.jpg" style="width:164px;border-radius: 4px;height: 105px;">
+                    <img src="../public/picture/smooty.jpg" class="img-card">
                     </div>
                     <div class="card-info">
                         <p class="text-title">คูปองน้ำปั่น</p>
@@ -268,7 +273,7 @@
             <div class="column1">
                 <div class="card">
                     <div class="card-img">
-                    <img src="../public/picture/smooty.jpg" style="width:164px;border-radius: 4px;height: 105px;">
+                    <img src="../public/picture/smooty.jpg" class="img-card">
                     </div>
                     <div class="card-info">
                         <p class="text-title">คูปองน้ำปั่น</p>
@@ -290,7 +295,7 @@
             <div class="column1">
                 <div class="card">
                     <div class="card-img">
-                        <img src="../public/picture/moodang.jpg" style="width:164px;border-radius: 4px;">
+                        <img src="../public/picture/moodang.jpg" class="img-card">
                     </div>
                     <div class="card-info">
                         <p class="text-title">หมูเด้ง </p>
@@ -312,7 +317,7 @@
             <div class="column1">
                 <div class="card">
                     <div class="card-img">
-                        <img src="../public/picture/moodang.jpg" style="width:164px;border-radius: 4px;">
+                        <img src="../public/picture/moodang.jpg" class="img-card">
                     </div>
                     <div class="card-info">
                         <p class="text-title">หมูเด้ง </p>
@@ -334,7 +339,7 @@
             <div class="column1">
                 <div class="card">
                     <div class="card-img">
-                        <img src="../public/picture/moodang.jpg" style="width:164px;border-radius: 4px;">
+                        <img src="../public/picture/moodang.jpg" class="img-card">
                     </div>
                     <div class="card-info">
                         <p class="text-title">หมูเด้ง </p>
@@ -356,7 +361,7 @@
             <div class="column1">
                 <div class="card">
                     <div class="card-img">
-                        <img src="../public/picture/moodang.jpg" style="width:164px;border-radius: 4px;">
+                        <img src="../public/picture/moodang.jpg" class="img-card">
                     </div>
                     <div class="card-info">
                         <p class="text-title">หมูเด้ง </p>
@@ -378,10 +383,10 @@
             <div class="column1">
                 <div class="card">
                     <div class="card-img">
-                        <img src="../public/picture/moodang.jpg" style="width:164px;border-radius: 4px;">
+                        <img src="../public/picture/moodang.jpg" class="img-card">
                     </div>
                     <div class="card-info">
-                        <p class="text-title">หมูเด้ง </p>
+                        <p class="text-title">หมูเด้ง</p>
                         <p class="text-body">เจ้าหมูเด้งตัวอ้วนเอาไปอวดเพื่อน</p>
                     </div>
                     <div class="card-footer">
@@ -397,9 +402,8 @@
                 </div>      
             </div>
         </div>
-    </div>
 
-    <div id="formgif" class="gifform">
+        <div id="formgif" class="gifform">
             <form action="../config/gifac.php" method="post" class="form">
                 <div class="container">
                     <h1>แลกของรางวัล</h1>
@@ -411,7 +415,7 @@
                     <input type="text" name="floor" placeholder="ชั้นม.6 ห้อง * เลขที่ *">
 
                     <label for="telphone"><b>เบอร์ติดต่อ</b></label>
-                    <input type="tel" name="telphone" placeholder="เบอร์โทรศัพท์">
+                    <input type="tel" name="telphone" class="telphone" placeholder="เบอร์โทรศัพท์">
 
                     <div class="clearfix">
                         <button type="button" id="no" onclick="document.getElementById('formgif').style.display='none'">ยกเลิก</button>
@@ -420,6 +424,9 @@
                 </div>
             </form>
         </div>
+    </div>
+
+    
 
     <script src="../public/js/readQr.js"></script>
     <script src="../public/js/scroll.js"></script>

@@ -79,7 +79,7 @@
 
 
 <script>
-        document.getElementById("genqr").addEventListener("submit", function(event) {
+    document.getElementById("genqr").addEventListener("submit", function(event) {
     event.preventDefault();  // ป้องกันการ reload หน้าเว็บ
 
     const activity = document.getElementById("activity").value.trim();
@@ -130,7 +130,6 @@
         }
     });
 });
-
 </script>
 
 

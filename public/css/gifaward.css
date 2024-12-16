@@ -58,6 +58,12 @@ body::-webkit-scrollbar {
     transition: .3s ease;
 }
 
+.img-card {
+    width:164px;
+    border-radius: 4px;
+    height: 105px;
+}
+
 .card-info {
     padding-top: 10%;
 }
@@ -112,7 +118,7 @@ svg {
     background-color: #ffcaa6;
 }
 
-input[type=text] ,input[type=tel]{
+input[type=text] , .telphone{
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -121,7 +127,7 @@ input[type=text] ,input[type=tel]{
     background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=tel] {
+input[type=text]:focus, .telphone:focus {
     background-color: #ddd;
     outline: none;
 }
@@ -170,6 +176,12 @@ input[type=text]:focus, input[type=tel] {
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 400px;
+    border-radius: 8px;
+    margin-top: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
 }
 
 hr {
@@ -190,4 +202,171 @@ hr {
 .form {
     animation-name: modalopen;
     animation-duration: 0.5s;
+}
+
+
+
+/* หน้าจอขนาดกลาง (2 card ต่อแถว) */
+@media (min-width: 489px) and (max-width: 787px) {
+    .column1 {
+        width: 45%; /* จัดให้มี 2 column */
+    }
+}
+
+/* หน้าจอขนาดเล็ก (1 card ต่อแถว) */
+@media (min-width: 377px) and (max-width: 486px) {
+    .column1 {
+        width: 40%; /* จัดให้มี 1 column */
+    }
+}
+
+@media (max-width: 376px) {
+    .row {
+        margin-top: 17vh;
+    }
+
+    h2 {
+        padding-bottom: 2vh;
+    }
+    
+    .column1 {
+        width: 50%;
+        height: 30vh;
+        padding: 0 2vh;
+        box-sizing: border-box;
+        
+    }
+
+    .card {
+        width: 25vh;
+        height: 33vh;
+    }
+
+    .img-card {
+        width: 20.99vh;
+        height: 11.8vh;
+    }
+
+    .card-info {
+        margin-top: -1vh;
+    }
+
+    .text-title {
+        font-size: 17px;
+    }
+
+    .text-body {
+        font-size: 12px;
+    }
+
+    @media (min-height: 700px) {
+        .row {
+            margin-top: 13.5vh;
+        }
+        
+        .card {
+            width: 20vh;
+            height: 29vh;
+        }
+
+        .column1 {
+            width: 23vh;
+            height: 26vh;
+            padding: 0 1.7vh;
+            box-sizing: border-box;
+        }
+
+        .img-card {
+            width: 17vh;
+            height: 10.33vh;
+        }
+
+        .card-info {
+            margin-top: -1vh;
+        }
+    
+        .text-title {
+            font-size: 21px;
+        }
+    
+        .text-body {
+            font-size: 16px;
+        }
+    }
+}
+
+
+@media (min-width: 377px) and (max-width: 486px) {
+    .row {
+        margin-top: 17vh;
+    }
+
+    h2 {
+        padding-bottom: 2vh;
+    }
+    
+    .column1 {
+        width: 50%;
+        height: 30vh;
+        padding: 0 2vh;
+        box-sizing: border-box;
+        
+    }
+
+    .card {
+        width: 25vh;
+        height: 33vh;
+    }
+
+    .img-card {
+        width: 20.99vh;
+        height: 11.8vh;
+    }
+
+    .card-info {
+        margin-top: -1vh;
+    }
+
+    .text-title {
+        font-size: 17px;
+    }
+
+    .text-body {
+        font-size: 12px;
+    }
+
+    @media (min-height: 700px) {
+        .row {
+            margin-top: 13.5vh;
+        }
+        
+        .card {
+            width: 20vh;
+            height: 29vh;
+        }
+
+        .column1 {
+            width: 23vh;
+            height: 26vh;
+            padding: 0 1.7vh;
+            box-sizing: border-box;
+        }
+
+        .img-card {
+            width: 17.1vh;
+            height: 10.39vh;
+        }
+
+        .card-info {
+            margin-top: -1vh;
+        }
+    
+        .text-title {
+            font-size: 23px;
+        }
+    
+        .text-body {
+            font-size: 18px;
+        }
+    }
 }

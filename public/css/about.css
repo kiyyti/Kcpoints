@@ -27,8 +27,12 @@ body::-webkit-scrollbar {
     box-sizing: inherit;
 }
 
+.aboutcontent {
+    margin-top: 15vh;
+}
+
 .row { 
-    margin-top: 8%;
+    margin-top: 4%;
 }
 
 .column {
@@ -107,3 +111,145 @@ body::-webkit-scrollbar {
     margin-top: 3%;
     text-align: center;
 } 
+
+.text-maps {
+    text-align: center;
+    color: white;
+}
+
+#text-reccomment {
+    text-align: center;
+    color: white;
+    margin-top: 3%;
+}
+
+.profile {
+    width:  100%;
+}
+
+iframe {
+    width: 1000px;
+    height: 450px;
+    border-radius: 1vh;
+}
+
+.aboutpage h1, .aboutpage h2, .aboutpage h3, .aboutpage h4 {
+    color: #fff;
+}
+
+.aboutpage .aboutcontent {
+    width: 1024px;
+    margin: 0 auto;
+    margin-block: 200px;
+}
+
+.aboutpage .aboutcontent .map iframe {
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    margin-block: 20px;
+}
+
+.contact .contactsocial .icon {
+    color: #fff;
+    font-size: 48px;
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid rgba(138,61,54,.5);
+}
+
+.contact .contactsocial {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: #750E21;
+    margin-block: 30px;
+    transition: all .3s;
+}
+
+.kc-typography {
+        color: #fff;
+        word-break: break-word;
+        line-height: 1.5714285714285714;
+        text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.kc-image-img {
+    border-radius: 500px;
+    height: 125px;
+    margin-top: -100px;
+}
+
+
+
+@media (max-width: 376px) {
+    .row {
+        display: none;
+    }
+
+    .aboutcontent {
+        margin-top: 18vh;
+    }
+
+    iframe {
+        width:50vh;
+        height: 40vh;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+
+    .contact > * {
+        margin-bottom: -7vh; 
+    }
+
+    .contact > *:last-child {
+        margin-bottom: -1vh; /* ไม่มีระยะห่างกล่องสุดท้าย */
+    }
+
+    .maps , .reccoment{
+        margin-top: 4vh;
+    }
+}
+
+@media (min-width: 377px) and (max-width: 427px) {
+    .row {
+        display: none;
+    }
+
+    .aboutcontent {
+        margin-top: 18vh;
+    }
+
+    iframe {
+        width:50vh;
+        height: 40vh;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+
+    .contact > * {
+        margin-bottom: -7vh; 
+    }
+
+    .contact > *:last-child {
+        margin-bottom: -1vh; /* ไม่มีระยะห่างกล่องสุดท้าย */
+    }
+
+    .maps , .reccoment{
+        margin-top: 4vh;
+    }
+}

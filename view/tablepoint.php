@@ -23,15 +23,7 @@ if ($query->rowCount() > 0) {
     <title>Table score</title>
     <link rel="stylesheet" href="../public/css/navbar.css">
     <link rel="stylesheet" href="../public/css/tablescore.css">
-    <style>
-        tbody {
-            color: white;
-        }
-
-        * {
-            font-family: 'Mali', sans-serif;
-        }
-    </style>
+    <script src="../public/js/nav.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -48,15 +40,22 @@ if ($query->rowCount() > 0) {
                     <li><a href="tablepoint.php" class="link">ตารางคะแนน</a></li>
                     <li><a href="gif.php" class="link">แลกของรางวัล</a></li>
                     <li><a href="about.php" class="link">เกี่ยวกับ</a></li>
+                    <li class="respon-link"><button id="readQr" class="respon-qr">แสกน Qr</button></li>
+                    <li class="respon-link">
+                        <button id="btn-out" class="respon-out">
+                            <a href="../config/logout.php">ออกจากระบบ</a>
+                        </button>
+                    </li>
                 </ul>
             </div>
-            <div class="nav-button">
-                
-                <button class="btn-out" id="readQr">แสกน QR</button>
+            <div class="nav-button" >
+                <button class="btn-out" id="readQr" >แสกน QR</button>
                 <button class="btn-out">
                     <a href="../config/logout.php" class="out">ออกจากระบบ</a>
                 </button>
-                
+            </div>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
             </div>
         </nav>
 

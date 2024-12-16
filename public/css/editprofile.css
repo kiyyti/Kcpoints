@@ -1,4 +1,4 @@
-.edit-window {
+.edit-window, .windowstats, .window-achive{
     display: none;
     position: fixed;
     left: 0;
@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-.edit-content {
+.edit-content, .stats-window-content, .achive-window-content{
     background-color: white;
     padding: 20px;
     border-radius: 15px;
@@ -20,8 +20,23 @@
     animation: fadeIn 0.5s ease;
 }
 
-.edit-content h2 {
+.edit-content h2{
     margin-top: 0;
+}
+
+.stats-window-content h2 {
+    color: #c82333;
+    padding-right: 32vh;
+}
+
+#head-stats-respon {
+    color: #218838;
+    font-size: 20px;
+}
+
+#under-stats-respon {
+    color: red;
+    font-size: 20px;
 }
 
 @keyframes fadeIn {
@@ -90,6 +105,8 @@ input {
     display: block;
     margin: 10px auto;
 }
+
+
 
 @media (max-width: 376px) {
     .edit-content {

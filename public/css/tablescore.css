@@ -7,7 +7,7 @@ div {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Mali', sans-serif;
 }
 
 body {
@@ -25,6 +25,10 @@ body::-webkit-scrollbar {
 table {
     text-align: center;
     margin-top: 7%;
+}
+
+tbody {
+    color: white;
 }
 
 #customers {
@@ -51,3 +55,46 @@ table {
     color: yellow;
 }
 
+@media (max-width: 376px) {
+    table {
+        margin-top: 17vh;
+    }
+
+    @media (min-height: 700px) {
+        table {
+            margin-top: 10vh;
+        }
+    }
+}
+
+@media (min-width: 377px) and (max-width: 426px) {
+    table {
+        margin-top: 17vh;
+    }
+
+    @media (min-height: 700px) {
+        table {
+            margin-top: 5vh;
+        }
+    }
+
+    @media (min-height: 860px) {
+        table {
+            margin-top: 0.2vh;
+        }
+    }
+}
+
+@media (min-width: 427px) and (max-width: 787px) {
+    table {
+        margin-top: 17vh;
+    }
+
+    @media (min-height: 700px) {
+        table {
+            margin-top: -2vh;
+        }
+    }
+
+    
+}

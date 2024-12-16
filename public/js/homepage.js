@@ -26,3 +26,18 @@ function previewProfile(event) {
     reader.readAsDataURL(event.target.files[0]);
 }
 
+function open_statswindow() {
+    document.getElementById("windowstats").style.display = "flex";
+}
+
+function close_statswindow() {
+    document.getElementById("windowstats").style.display = "none";
+}
+
+function open_achivewindow() {
+    document.getElementById("window-achive").style.display = "flex";
+}
+
+function close_achivewindow() {
+    document.getElementById("window-achive").style.display = "none";
+}
